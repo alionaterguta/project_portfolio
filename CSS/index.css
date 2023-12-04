@@ -1,0 +1,211 @@
+/*
+Colors used
+
+Text Color (Dark Gray): #2c2c2c;
+Background Color (Light purple):#E4E1E5;
+Primary Color ( Purple): #3F0B52;
+Secondary Color (Light Gray): #D3D0CB;
+Change color when hovering (Pink): #FF7485
+Line color (light Gray): #b0afaf;
+ */
+
+ :root {
+    --primary-color:#3F0B52;
+    --secondary-color:#FF7485;
+    --dark-gray: #2c2c2c;
+    --bg-color: #E4E1E5;
+    --light-gray:  #b0afaf;
+    --white:#fff;
+    --light-gray-link:#D3D0CB;
+    --scale: 1.05;
+    --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4),  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+ *{
+box-sizing: border-box;
+ }
+body { 
+    background-color:var(--bg-color);
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--dark-gray);
+}
+h1 { 
+    font-size: 40px;
+    font-weight: 600;
+}
+h2 {
+    font-size: 28;
+    line-height: 1.5;
+    font-weight: 600;
+}
+h3 {
+    font-size: 18;
+    line-height: 1.5;
+    font-weight: 600;
+}
+/*Link-Change color, remove underline */
+a {
+   color:var(--dark-gray); 
+   text-decoration: none;
+   font-size: 16px;
+   /* padding: 8px 8px; */
+}
+/* Remove underline and add color to text */
+a:hover, a:focus {
+text-decoration: none;
+color:var(--secondary-color);
+}
+
+button,
+.button_primary{ 
+    display: inline-block;
+    background-color:var(--primary-color);
+    color:var(--bg-color);
+    padding: 16px 32px;
+    border-radius: 30px;
+    border: none;
+    font-family: inherit;
+    transition: 0.3s ease background-color color;
+}
+button:hover, button:focus,
+.button_primary:hover,.button_primary:focus {
+    /* while hovering appears a hand over it*/
+    cursor: pointer;
+    /* reduces the opacity*/
+    background-color: var(--secondary-color); 
+    color:var(--dark-gray); 
+}
+.page_header{
+   display: flex;
+   /* align-content: last baseline; */
+   width: 100%;
+   padding: 16px 24px 16px 0px;
+}
+.page_header_item{ 
+    flex: 0 1 70px;
+    letter-spacing: -0.5px;
+}
+/*.page_header_item:nth-child(1){
+    width: 200px;
+    text-align: start; 
+} */
+.page_header_item:last-child{
+    flex-grow: 1;
+    text-align: right;
+    align-self: center;
+}
+/* Menu Items, default, hover and active */
+.navigation_item {
+    font-family: 'Magra', sans-serif;
+    font-size: 15px;
+    padding: 8px;
+    transition: 0.2s ease;
+}
+.navigation_item--active {
+text-decoration: underline;
+color:var(--primary-color);
+}
+.profile_portrait{
+    float: left;
+   /*  max-width: 250 px;
+    min-width: 250px;*/
+    width: 250px;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+.profile{
+    width: 50%;
+    margin: 100px auto 200px;
+    /* margin-bottom: 200px; */
+}
+.profile_paragraph{
+font-size: 18px;
+}
+/* Media Query for screens 500px and below */
+@media all and (max-width: 500px ){
+.profile_portrait{
+    float: center;
+   /*  max-width: 250 px;
+    min-width: 250px;*/
+    width: 100%;
+    margin: 20px;
+    border-radius: 50%;
+}
+.profile{
+    width: 50%;
+    /* margin: 100px auto 200px; */
+    /* margin-bottom: 200px; */
+}
+.profile_paragraph{
+font-size: 16px;
+text-align: center;
+} 
+   h1{
+    font-size: 22px;
+    text-align: center;
+   }
+   h2{
+    font-size: 18px;
+   }
+   h3{
+    font-size: 16px;
+   }
+   p{
+    font-size: 16px;
+   }
+   .button{
+    font-size: 14px;
+    width: auto;
+    align-self: auto;
+   }
+}
+/* Setting media queries for tablet screens */
+@media all and (min-width: 500px ) and (max-width: 750px){
+    .profile_portrait{
+        float: center;
+       /*  max-width: 250 px;
+        min-width: 250px;*/
+        width: 250px;
+        margin: 40px;
+        border-radius: 50%;
+    }
+    .profile{
+        width: 50%;
+        /* margin: 100px auto 200px; */
+        /* margin-bottom: 200px; */
+    }
+    .profile_paragraph{
+    font-size: 17px;
+    text-align: center;
+    }
+       h1{
+        font-size: 30px;
+        text-align: center;
+       }
+       h2{
+        font-size: 22px;
+       }
+       h3{
+        font-size: 17px;
+       }
+.button_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px;
+}
+       .button{
+        font-size: 15px;
+        width:auto ;
+       }     
+    }
+.page_footer{
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+    
+        

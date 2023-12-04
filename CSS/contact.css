@@ -1,0 +1,212 @@
+/*
+Colors used
+
+Text Color (Dark Gray): #2c2c2c;
+Background Color (Light purple):#E4E1E5;
+Primary Color ( Purple): #3F0B52;
+Secondary Color (Light Gray): #D3D0CB;
+Change color when hovering (Pink): #FF7485
+Line color (light Gray): #b0afaf;
+ */
+
+ :root {
+    --primary-color:#3F0B52;
+    --secondary-color:#FF7485;
+    --dark-gray: #2c2c2c;
+    --bg-color: #E4E1E5;
+    --light-gray:  #b0afaf;
+    --white:#fff;
+    --light-gray-link:#D3D0CB;
+    --scale: 1.05;
+    --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4),  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+ *{
+box-sizing: border-box;
+}
+body { 
+    background-color:var(--bg-color);
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--dark-gray);
+}
+h1 { 
+    font-size: 40px;
+    font-weight: 600;
+}
+.heading_contact{
+    display: flex;
+    text-align: left;
+    margin-left: 24px;
+    margin-right: 24px;
+    }
+h2 {
+    font-size: 28;
+    line-height: 1.5;
+    font-weight: 600;
+}
+h3 {
+    font-size: 18;
+    line-height: 1.5;
+    font-weight: 600;
+}
+/*Link-Change color, remove underline */
+a {
+    color:var(--dark-gray); 
+    text-decoration: none;
+    font-size: 16px;
+    /* padding: 8px 8px; */
+ }
+ /* Remove underline and add color to text */
+ a:hover, a:focus {
+ text-decoration: none;
+ color:var(--secondary-color);
+ }
+input[type=text],
+input[type=email], 
+input[type=tel],
+#contact-message, select{
+    width:100%;
+    padding: 8px 16px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #b0afaf;
+    border-radius: 4px;
+    background-color: #E4E1E5;
+    box-sizing: border-box;
+}
+.submit{
+    background-color: var(--bg-color);
+    border-radius: 4px;
+    color:var(--dark-gray);
+    padding: 8px 16px;
+    margin: 8px 0;
+    border: none;
+    transition: 0.3s ease;
+}
+.submit:hover{
+    cursor: pointer;
+    background-color: var(--secondary-color);
+}
+.page_header{
+    display: flex;
+    /* align-content: last baseline; */
+    width: 100%;
+    padding: 16px 24px 16px 0px;
+ }
+.page_header_item{ 
+     flex: 0 1 70px;
+     letter-spacing: -0.5px;
+ }
+.page_header_item:last-child{
+    flex-grow: 1;
+    text-align: right;
+    align-self: center;
+}
+/* Menu Items, default, hover and active */
+.navigation_item {
+    font-family: 'Magra', sans-serif;
+    font-size: 15px;
+    padding: 8px;
+    transition: 0.2s ease;
+}
+.navigation_item--active {
+text-decoration: underline;
+color:var(--primary-color);
+}
+.page_footer{
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#button_go_top{
+    display: flex;
+    flex-direction:column;
+    text-align: right;
+    margin: 16px 24px;
+}
+/* start grid fallback */
+.grid_contact_item{
+    display: inline-block;
+    width: 33%;
+   }
+   /* end grid fallback */
+   @supports (display: grid){
+        .grid_contact{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto; /* Adjust this based on the content height */
+            justify-content: center;
+            grid-gap: 32px;
+            /* padding: 16px; */
+            margin: 32px 24px;
+        }
+        .grid_contact_item{
+            position: relative;
+            background-color:var(--primary-color); 
+            color: var(--white);
+            width: auto;
+            min-height: auto;
+            padding: 24px 32px; 
+            border-radius: 12px;
+            box-shadow:var(--box-shadow);
+        }
+        .grid_contact_item:nth-child(1){
+            background-color:transparent;
+            box-shadow: none;
+            color: #2c2c2c;
+            padding: 0;
+        }
+    }
+       /* setting media queries for mobile screens */
+@media all and (max-width: 500px ){
+    .grid_contact{
+        grid-template-columns: 1fr;
+        grid-gap: 32px;
+    }
+    h1{
+        font-size: 22px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    p{
+        font-size: 14px;
+    }
+    #phone,#email{
+        font-size: 14px;
+ }
+ .grid_contact_item:nth-child(1){
+    padding: 0;
+}
+}
+ /* Setting media queries for tablet screens */
+@media all and (min-width: 500px ) and (max-width: 750px){
+    .grid_contact{
+        grid-template-columns:1fr;
+        grid-gap: 32px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 22px;
+    }
+    h3{
+        font-size: 17px;
+    }
+    p{ 
+        font-size: 15px;
+    }
+    #phone,#email{
+        font-size: 15px;
+    }
+    .grid_contact_item:nth-child(1){
+        padding: 0;
+    }
+}

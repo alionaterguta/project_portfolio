@@ -53,9 +53,10 @@ a {
    font-size: 16px;
 }
 /* Remove underline and add color to text */
-a:hover, a:focus {
-text-decoration: none;
-color:var(--secondary-color);
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: var(--secondary-color);
 }
 .profile{
     display: flex;
@@ -115,46 +116,52 @@ button:hover, button:focus,
     transition: 0.2s ease;
 }
 .navigation_item--active {
-text-decoration: underline;
-color:var(--primary-color);
-}
-.profile_paragraph{
-font-size: 18px;
-line-height: 1.8;
-margin: 8px 0 24px 0;
-}
-.button{
-display: inline-block;
-font-size: 16px;
-width:auto;
-}  
-/* Media Query for screens 500px and below */
- @media all and (max-width: 500px ){  
-.profile{ 
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-} 
-.profile_item{
-     margin: 0 16px;
-     width: auto;
+    text-decoration: underline;
+    color: var(--primary-color);
 }
 .profile_paragraph {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.8;
-} 
-   h1{
-    font-size: 24px;
-    text-align: center;
-    margin: 16px 0 8px 0;
-   }
-   p{
+    margin: 8px 0 24px 0;
+}
+
+.button {
+    display: inline-block;
     font-size: 16px;
-   }
-   .button{
-    font-size: 14px;
-} 
-} 
+    width: auto;
+}
+/* Media Query for screens 500px and below */
+ @media all and (max-width: 500px) {
+     .profile {
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+     }
+
+     .profile_item {
+         margin: 0 16px;
+         width: auto;
+     }
+
+     .profile_paragraph {
+         font-size: 16px;
+         line-height: 1.8;
+     }
+
+     h1 {
+         font-size: 24px;
+         text-align: center;
+         margin: 16px 0 8px 0;
+     }
+
+     p {
+         font-size: 16px;
+     }
+
+     .button {
+         font-size: 14px;
+     }
+ }
 /* Setting media queries for tablet screens */
 @media all and (min-width: 500px ) and (max-width: 750px){
 

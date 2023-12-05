@@ -50,7 +50,6 @@ a {
    color:var(--dark-gray); 
    text-decoration: none;
    font-size: 16px;
-   /* padding: 8px 8px; */
 }
 /* Remove underline and add color to text */
 a:hover, a:focus {
@@ -70,15 +69,12 @@ button,
 }
 button:hover, button:focus,
 .button:hover,.button:focus {
-    /* while hovering appears a hand over it*/
     cursor: pointer;
-    /* reduces the opacity*/
     background-color: var(--secondary-color); 
     color:var(--dark-gray); 
 }
   .page_header{
     display: flex;
-    /* align-content: last baseline; */
     width: 100%;
     padding: 16px 24px 16px 0px;
  }
@@ -89,10 +85,6 @@ button:hover, button:focus,
  .page_header.about_header{
      border-bottom:1px solid var(--light-gray);
  }
- /*.page_header_item:nth-child(1){
-     width: 200px;
-     text-align: start; 
- } */
  .page_header_item:last-child{
      flex-grow: 1;
      text-align: right;

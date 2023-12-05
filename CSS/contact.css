@@ -55,7 +55,6 @@ h3 {
 p{
     font-size: 16px;
     text-align: top;
-
 }
 span{
     color:var(--primary-color);
@@ -142,7 +141,7 @@ color:var(--primary-color);
     display: inline-block;
     width: 33%;
    }
-   /* end grid fallback */
+/* end grid fallback */
    @supports (display: grid){
         .grid_contact{
             display: grid;

@@ -65,6 +65,8 @@ button,
     padding: 16px 32px;
     border-radius: 30px;
     border: none;
+    display: inline-block;
+    transition: 0.3s ease background-color color;
 }
 button:hover, button:focus,
 .button:hover,.button:focus {
@@ -74,13 +76,6 @@ button:hover, button:focus,
     background-color: var(--secondary-color); 
     color:var(--dark-gray); 
 }
-.button, button {
-    display: inline-block;
-    /* takes the font from the outer container */
-    font-family: inherit;
-    transition: 0.3s ease background-color color;
-    transition-property: opacity;
-  }
   .page_header{
     display: flex;
     /* align-content: last baseline; */
@@ -156,7 +151,7 @@ button:hover, button:focus,
     flex: 0 1 0;
    }
    h1{
-    font-size: 22px;
+    font-size: 24px;
    }
    h2{
     font-size: 18px;

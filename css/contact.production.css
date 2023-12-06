@@ -178,11 +178,11 @@ Line color (light Gray): #b0afaf;
                 -webkit-box-pack: center;
                     -ms-flex-pack: center;
                         justify-content: center;
-                grid-gap: 32px;
+                gap: 32px;
                 /* padding: 16px; */
                 margin: 32px 24px;
             }
-            .grid_contact > *:nth-child(1){
+            /* .grid_contact > *:nth-child(1){
     -ms-grid-row: 1;
     grid-row: 1; 
     -ms-grid-column: 1;
@@ -193,7 +193,7 @@ Line color (light Gray): #b0afaf;
     grid-row: 1; 
     -ms-grid-column: 3;
     grid-column: 3;
-            }
+            } */
             .grid_contact_item{
                 position: relative;
                 background-color:#3F0B52; 
@@ -218,7 +218,7 @@ Line color (light Gray): #b0afaf;
         .grid_contact{
             -ms-grid-columns: 1fr;
             grid-template-columns: 1fr;
-            grid-gap: 32px;
+            gap: 32px;
             margin: 0 24px;
         }
         h1{
@@ -245,7 +245,7 @@ Line color (light Gray): #b0afaf;
         .grid_contact{
             -ms-grid-columns:1fr;
             grid-template-columns:1fr;
-            grid-gap: 32px;
+            gap: 32px;
             margin: 0 24px;
         }
         h1{

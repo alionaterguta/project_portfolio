@@ -15,6 +15,7 @@ Line color (light Gray): #b0afaf;
     --dark-gray: #2c2c2c;
     --bg-color: #E4E1E5;
     --light-gray:  #b0afaf;
+    --gray: #767676;
     --white:#fff;
     --light-gray-link:#D3D0CB;
     --scale: 1.05;
@@ -56,7 +57,6 @@ a:hover, a:focus {
 text-decoration: none;
 color:var(--secondary-color);
 }
-button,
 .button{ 
     /* button can be styled*/
     background-color:var(--primary-color);
@@ -67,11 +67,22 @@ button,
     display: inline-block;
     transition: 0.3s ease background-color color;
 }
-button:hover, button:focus,
 .button:hover,.button:focus {
     cursor: pointer;
     background-color: var(--secondary-color); 
     color:var(--dark-gray); 
+}
+.button_secondary{
+  background-color: transparent;
+  color: var(--primary-color);
+  padding: 8px 16px;
+  margin: 2px 2px 4px;
+  display: inline-block;
+  text-align: center;
+  font-size: 11px;
+  border: 1px solid var(--primary-color);
+  border-radius: 20px;
+  transition: none;
 }
   .page_header{
     display: flex;
@@ -133,6 +144,48 @@ button:hover, button:focus,
 .about_child:nth-child(6){
     margin: 32px 0px 8px;
 }
+/* start grid fallback */
+.about_child1{
+  display: inline-block;
+  width: 33%;
+ }
+ /* end grid fallback */
+  /* Grid display Education */
+@supports (display: grid){
+.about_content.second {
+  display: grid;
+  width: 700px;
+  grid-template-columns:auto auto;
+  padding: 12px;
+  row-gap: 12px;
+  /* background-color:var(--dark-gray); */
+}
+  .about_child1{
+    background-color:var(--bg-color);
+    width: auto;
+    min-height: auto;
+    padding: 16px;
+    background-color: #f3eff4;
+  }
+.about_child1--container {
+  padding: 6px;
+}
+p.course_name{
+  font-size: 17px;
+  margin: 8px 0;
+}
+p.school_name{
+  font-size: 17px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+p.years{
+  font-size: 15px;
+  font-weight: 400;
+  margin: 4px 0;
+  color: var(--gray);
+}
+}
 /* Media Query for screens 500px and below */
 @media all and ( max-width: 500px){
     .about_content{
@@ -141,6 +194,12 @@ button:hover, button:focus,
     }
    .about_child{
     flex: 0 1 0;
+   }
+   .about_content.second{
+    grid-template-columns: 1fr;
+    width: auto;
+    row-gap: 0;
+    padding: 6px;
    }
    h1{
     font-size: 24px;
@@ -158,6 +217,18 @@ button:hover, button:focus,
     font-size: 14px;
     width: 100%;
    }
+   p.course_name{
+    font-size: 15px;
+    margin: 8px 0;
+  }
+  p.school_name{
+    font-size: 15px;
+    font-weight: 500;
+    }
+  p.years{
+    font-size: 14px;
+    font-weight: 400;
+  }
 }
 /* Setting media queries for tablet screens */
 @media all and (min-width: 500px ) and (max-width: 750px){
@@ -167,6 +238,12 @@ button:hover, button:focus,
     }
    .about_child{
     flex: 0 1 0;
+   }
+   .about_content.second{
+    grid-template-columns: 1fr;
+    width: auto;
+    row-gap: 0px;
+    padding: 8px;
    }
    h1{
     font-size: 30px;
@@ -183,7 +260,19 @@ button:hover, button:focus,
    .button{
     font-size: 15px;
     width: 100%;
-   }     
+   }
+   p.course_name{
+    font-size: 16px;
+    margin: 8px 0;
+  }
+  p.school_name{
+    font-size: 16px;
+    font-weight: 500;
+    }
+  p.years{
+    font-size: 15px;
+    font-weight: 400;
+  }     
    }
    /* Start of animation transformation.
    Animation applied to the sun */

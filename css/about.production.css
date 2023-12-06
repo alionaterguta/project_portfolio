@@ -56,18 +56,6 @@ Line color (light Gray): #b0afaf;
     text-decoration: none;
     color:#FF7485;
     }
-    button{ 
-        /* button can be styled*/
-        background-color:#3F0B52;
-        color:#E4E1E5;
-        padding: 16px 32px;
-        border-radius: 30px;
-        border: none;
-        display: inline-block;
-        -webkit-transition: 0.3s ease background-color color;
-        -o-transition: 0.3s ease background-color color;
-        transition: 0.3s ease background-color color;
-    }
     .button{ 
         /* button can be styled*/
         background-color:#3F0B52;
@@ -80,16 +68,6 @@ Line color (light Gray): #b0afaf;
         -o-transition: 0.3s ease background-color color;
         transition: 0.3s ease background-color color;
     }
-    button:hover {
-        cursor: pointer;
-        background-color: #FF7485; 
-        color:#2c2c2c; 
-    }
-    button:focus {
-        cursor: pointer;
-        background-color: #FF7485; 
-        color:#2c2c2c; 
-    }
     .button:hover {
         cursor: pointer;
         background-color: #FF7485; 
@@ -99,6 +77,20 @@ Line color (light Gray): #b0afaf;
         cursor: pointer;
         background-color: #FF7485; 
         color:#2c2c2c; 
+    }
+    .button_secondary{
+      background-color: transparent;
+      color: #3F0B52;
+      padding: 8px 16px;
+      margin: 2px 2px 4px;
+      display: inline-block;
+      text-align: center;
+      font-size: 11px;
+      border: 1px solid #3F0B52;
+      border-radius: 20px;
+      -webkit-transition: none;
+      -o-transition: none;
+      transition: none;
     }
       .page_header{
         display: -webkit-box;
@@ -190,6 +182,50 @@ Line color (light Gray): #b0afaf;
     .about_child:nth-child(6){
         margin: 32px 0px 8px;
     }
+    /* start grid fallback */
+    .about_child1{
+      display: inline-block;
+      width: 33%;
+     }
+     /* end grid fallback */
+      /* Grid display Education */
+    @supports (display: grid){
+    .about_content.second {
+      display: -ms-grid;
+      display: grid;
+      width: 700px;
+      -ms-grid-columns:auto auto;
+      grid-template-columns:auto auto;
+      padding: 12px;
+      row-gap: 12px;
+      /* background-color:var(--dark-gray); */
+    }
+      .about_child1{
+        background-color:#E4E1E5;
+        width: auto;
+        min-height: auto;
+        padding: 16px;
+        background-color: #f3eff4;
+      }
+    .about_child1--container {
+      padding: 6px;
+    }
+    p.course_name{
+      font-size: 17px;
+      margin: 8px 0;
+    }
+    p.school_name{
+      font-size: 17px;
+      font-weight: 600;
+      margin: 8px 0;
+    }
+    p.years{
+      font-size: 15px;
+      font-weight: 400;
+      margin: 4px 0;
+      color: #767676;
+    }
+    }
     /* Media Query for screens 500px and below */
     @media all and ( max-width: 500px){
         .about_content{
@@ -203,6 +239,13 @@ Line color (light Gray): #b0afaf;
         -webkit-box-flex: 0;
             -ms-flex: 0 1 0px;
                 flex: 0 1 0;
+       }
+       .about_content.second{
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        width: auto;
+        row-gap: 0;
+        padding: 6px;
        }
        h1{
         font-size: 24px;
@@ -220,6 +263,18 @@ Line color (light Gray): #b0afaf;
         font-size: 14px;
         width: 100%;
        }
+       p.course_name{
+        font-size: 15px;
+        margin: 8px 0;
+      }
+      p.school_name{
+        font-size: 15px;
+        font-weight: 500;
+        }
+      p.years{
+        font-size: 14px;
+        font-weight: 400;
+      }
     }
     /* Setting media queries for tablet screens */
     @media all and (min-width: 500px ) and (max-width: 750px){
@@ -234,6 +289,13 @@ Line color (light Gray): #b0afaf;
         -webkit-box-flex: 0;
             -ms-flex: 0 1 0px;
                 flex: 0 1 0;
+       }
+       .about_content.second{
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        width: auto;
+        row-gap: 0px;
+        padding: 8px;
        }
        h1{
         font-size: 30px;
@@ -250,7 +312,19 @@ Line color (light Gray): #b0afaf;
        .button{
         font-size: 15px;
         width: 100%;
-       }     
+       }
+       p.course_name{
+        font-size: 16px;
+        margin: 8px 0;
+      }
+      p.school_name{
+        font-size: 16px;
+        font-weight: 500;
+        }
+      p.years{
+        font-size: 15px;
+        font-weight: 400;
+      }     
        }
        /* Start of animation transformation.
        Animation applied to the sun */

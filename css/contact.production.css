@@ -63,9 +63,7 @@ Line color (light Gray): #b0afaf;
         color:#2c2c2c; 
         text-decoration: none;
         font-size: 16px;
-        /* padding: 8px 8px; */
      }
-     /* Remove underline and add color to text */
      a:hover {
      text-decoration: none;
      color:#FF7485;
@@ -107,7 +105,6 @@ Line color (light Gray): #b0afaf;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        /* align-content: last baseline; */
         width: 100%;
         padding: 16px 24px 16px 0px;
      }
@@ -179,21 +176,8 @@ Line color (light Gray): #b0afaf;
                     -ms-flex-pack: center;
                         justify-content: center;
                 gap: 32px;
-                /* padding: 16px; */
                 margin: 32px 24px;
             }
-            /* .grid_contact > *:nth-child(1){
-    -ms-grid-row: 1;
-    grid-row: 1; 
-    -ms-grid-column: 1;
-    grid-column: 1;
-            }
-            .grid_contact > *:nth-child(2){
-    -ms-grid-row: 1;
-    grid-row: 1; 
-    -ms-grid-column: 3;
-    grid-column: 3;
-            } */
             .grid_contact_item{
                 position: relative;
                 background-color:#3F0B52; 

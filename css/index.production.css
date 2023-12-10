@@ -48,7 +48,6 @@ Line color (light Gray): #b0afaf;
        text-decoration: none;
        font-size: 16px;
     }
-    /* Remove underline and add color to text */
     a:hover {
         text-decoration: none;
         color: #FF7485;

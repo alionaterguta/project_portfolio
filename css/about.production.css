@@ -41,13 +41,11 @@ Line color (light Gray): #b0afaf;
         line-height: 1.5;
         font-weight: 600;
     }
-    /*Link-Change color, remove underline */
-    a {
+     a {
        color:#2c2c2c; 
        text-decoration: none;
        font-size: 16px;
     }
-    /* Remove underline and add color to text */
     a:hover {
     text-decoration: none;
     color:#FF7485;
@@ -57,7 +55,6 @@ Line color (light Gray): #b0afaf;
     color:#FF7485;
     }
     .button{ 
-        /* button can be styled*/
         background-color:#3F0B52;
         color:#E4E1E5;
         padding: 16px 32px;
@@ -198,7 +195,6 @@ Line color (light Gray): #b0afaf;
       grid-template-columns:auto auto;
       padding: 12px;
       row-gap: 12px;
-      /* background-color:var(--dark-gray); */
     }
       .about_child1{
         background-color:#E4E1E5;
@@ -339,10 +335,7 @@ Line color (light Gray): #b0afaf;
                 animation-direction: alternate;
         -webkit-animation-timing-function: linear;
                 animation-timing-function: linear;
-    /* Alternative code which makes the code shorter is to combine all proprieties in a single line
-         .sun{
-            animation: 4s color-change infinite alternate linear } */
-       }
+          }
        @-webkit-keyframes color-change {
         0% {
           fill: #edc655;

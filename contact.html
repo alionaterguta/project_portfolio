@@ -1,79 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aliona Terguta - Portfolio</title>
-    <link rel="shortcut icon" href="./img/favicon-64x64.svg" type="image/x-icon"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/contact.production.css">
-</head>
+    <link
+      rel="shortcut icon"
+      href="./img/favicon-64x64.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/contact.production.css" />
+  </head>
 
-<body>
+  <body>
     <header class="page_header">
-          <!-- Place the logo in stead of the placeholder --> 
-            <img id="logo" class="page_header_item" src="./img/aliona-terguta-logo-no-BG.svg"  alt="Personal logo of Aliona Terguta, a text logo in uppercase letters that consists of my name">
-            <nav role="menubar" class="page_header_item">
-                <a href="index.html" role="menuitem" class="navigation_item"> HOME </a>
+      <!-- Place the logo in stead of the placeholder -->
+      <img
+        id="logo"
+        class="page_header_item"
+        src="./img/aliona-terguta-logo-no-BG.svg"
+        alt="Personal logo of Aliona Terguta, a text logo in uppercase letters that consists of my name"
+      />
+      <nav role="menubar" class="page_header_item">
+        <a href="index.html" role="menuitem" class="navigation_item"> HOME </a>
 
-                <a href="about.html" role="menuitem" class="navigation_item"> ABOUT ME</a>
+        <a href="about.html" role="menuitem" class="navigation_item">
+          ABOUT ME</a
+        >
 
-                <a href="my-work.html" role="menuitem" class="navigation_item"> MY WORK</a> 
+        <a href="my-work.html" role="menuitem" class="navigation_item">
+          MY WORK</a
+        >
 
-                <a href="contact.html" role="menuitem" class="navigation_item navigation_item--active">CONTACT</a>
-            </nav>
+        <a
+          href="contact.html"
+          role="menuitem"
+          class="navigation_item navigation_item--active"
+          >CONTACT</a
+        >
+      </nav>
     </header>
- <main>
-    <div class="heading_contact">
-        <h1> Contact</h1>
-    </div> 
-    <div class="grid_contact">
+    <main>
+      <div class="heading_contact">
+        <h1>Contact</h1>
+      </div>
+      <div class="grid_contact">
         <div class="grid_contact_item">
-            <h2> Let's collaborate! I'm open to exciting projects and partnerships. Reach out, and let's create something great
-                together!</h2>
-            <p>
-                <img src="./img/globe-icon.svg" alt="location icon"> Currently in <span>Frankfurt</span>, Germany.
-            </p>
-            <!-- <a href="tel:+49 15751778363" id="phone">Tel: +49 15 75 5177 8363</a> <br> -->
-            <a href="mailto:aliona.terguta@yahoo.com" id="email">Email: aliona.terguta@yahoo.com</a>
+          <h2>
+            Let's collaborate! I'm open to exciting projects and partnerships.
+            Reach out, and let's create something great together!
+          </h2>
+          <p>
+            <img src="./img/globe-icon.svg" alt="location icon" /> Currently in
+            <span>Frankfurt</span>, Germany.
+          </p>
+          <!-- <a href="tel:+49 15751778363" id="phone">Tel: +49 15 75 5177 8363</a> <br> -->
+          <a href="mailto:aliona.terguta@yahoo.com" id="email"
+            >Email: aliona.terguta@yahoo.com</a
+          >
         </div>
         <div class="grid_contact_item">
-            <form action="" method="post" id="contact-form">
-                <label for="user-name" class="standart-label"> Name</label><br>
-                <input type="text" id="user-name"><br>
-    
-                <label for="contact-email" class="standart-label"> Email </label><br>
-                <input type="email" id="contact-email" required><br>
-                <label for="contact-tel" class="standart-label"> Telephone</label><br> 
-                <input type="tel" id="contact-tel"><br>
-    
-                <label for="contact-message" class="standart-label"> Message</label><br>
-                <textarea name="contact-form" id="contact-message" cols="50" rows="5"
-                    maxlength="240"> Hello...</textarea><br>
-                <input type="submit" value="Send Message" class="submit">
-            </form> 
-        </div>
-    </div>
-</main>
+          <form action="" method="post" id="contact-form">
+            <label for="user-name" class="standart-label"> Name</label><br />
+            <input type="text" id="user-name" /><br />
 
-<footer class="page_footer"> 
-        <p> Find me on</p>  
-    <div class="social_media"> 
+            <label for="contact-email" class="standart-label"> Email </label
+            ><br />
+            <input type="email" id="contact-email" required /><br />
+            <label for="contact-message" class="standart-label"> Message</label
+            ><br />
+            <textarea
+              name="contact-form"
+              id="contact-message"
+              cols="50"
+              rows="5"
+              maxlength="240"
+            >
+ Hello...</textarea
+            ><br />
+            <input type="submit" value="Send Message" class="submit" />
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page_footer">
+      <p>Find me on</p>
+      <div class="social_media">
         <a href="https://github.com/alionaterguta" target="_blank">
-                <img src="./img/github-hub-icon-2.svg" alt="GitHub Icon">
-            </a>   
+          <img src="./img/github-hub-icon-2.svg" alt="GitHub Icon" />
+        </a>
         <a href="www.linkedin.com/in/aterguta" target="_blank">
-                <img src="./img/linkedin-icon-2.svg" alt="Linkedin Icon">
-            </a>
-        <a href="https://www.instagram.com/" target="_blank"> 
-            <img src="./img/instagram-icon-2.svg" alt="Instagram Icon"></a>
-    </div> 
-
-</footer> 
-<a href="#logo" id="button_go_top"> Back to top</a>
-   <script src="js/tota11y.min.js"> </script>     
-</body>
+          <img src="./img/linkedin-icon-2.svg" alt="Linkedin Icon" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src="./img/instagram-icon-2.svg" alt="Instagram Icon"
+        /></a>
+      </div>
+    </footer>
+    <a href="#logo" id="button_go_top"> Back to top</a>
+    <script src="js/tota11y.min.js"></script>
+  </body>
 </html>

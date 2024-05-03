@@ -14,11 +14,12 @@ Line color (light Gray): #b0afaf;
   --secondary-color: #ff7485;
   --dark-gray: #2c2c2c;
   --bg-color: #e4e1e5;
+  --bg-color-2: #f3eff4;
   --light-gray: #b0afaf;
   --white: #fff;
   --light-gray-link: #d3d0cb;
-  --scale: 1.05;
-  --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --scale: 1.02;
+  --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 * {
   box-sizing: border-box;
@@ -47,16 +48,19 @@ h3 {
 }
 .heading_my_work {
   display: flex;
-  text-align: left;
+  text-align: center;
+  justify-content: center;
   margin-left: 24px;
   margin-right: 24px;
+  font-family: "Playfair Display", serif;
+  font-weight: 550;
+  font-size: 40px;
 }
 /*Link-Change color, remove underline */
 a {
   color: var(--dark-gray);
   text-decoration: none;
   font-size: 16px;
-  /* padding: 8px 8px; */
 }
 /* Remove underline and add color to text */
 a:hover,
@@ -66,7 +70,6 @@ a:focus {
 }
 .page_header {
   display: flex;
-  /* align-content: last baseline; */
   width: 100%;
   padding: 16px 24px 16px 0px;
 }
@@ -116,14 +119,16 @@ a:focus {
 @supports (display: grid) {
   .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: auto auto;
+    justify-content: center;
     grid-gap: 24px;
-    margin: 16px 24px;
+    margin: 16px auto;
+    max-width: 900px;
   }
   .grid_item {
-    position: relative; /* Position relative for positioning the pseudo-element */
-    background-color: var(--dark-gray);
-    color: var(--white);
+    position: relative;
+    background-color: var(--bg-color-2);
+    /* color: var(--white); */
     width: auto;
     min-height: auto;
     padding: 24px;
@@ -135,15 +140,9 @@ a:focus {
     transform: scale(var(--scale)); /* Scale the item on hover */
     cursor: pointer;
   }
-  .grid_item:last-child {
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-  }
-  /* class of <a href="#" class="link_mywork">See project</a> on my-work.html */
+
   .link_mywork {
-    color: var(--light-gray-link);
+    color: var(--dark-gray);
     padding: 0 0;
   }
 }

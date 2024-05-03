@@ -2,7 +2,7 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
 * Autoprefixer: v10.4.7
-* Browsers: last 4 version
+* Browsers: last 2 version
 */
 
 /*
@@ -15,17 +15,30 @@ Secondary Color (Light Gray): #D3D0CB;
 Change color when hovering (Pink): #FF7485
 Line color (light Gray): #b0afaf;
  */
+
+:root {
+  --primary-color: #3f0b52;
+  --secondary-color: #ff7485;
+  --dark-gray: #2c2c2c;
+  --bg-color: #e4e1e5;
+  --bg-color-2: #f3eff4;
+  --light-gray: #b0afaf;
+  --white: #fff;
+  --light-gray-link: #d3d0cb;
+  --scale: 1.02;
+  --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 body {
-  background-color: #e4e1e5;
+  background-color: var(--bg-color);
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: #2c2c2c;
+  color: var(--dark-gray);
 }
 h1 {
   font-size: 40px;
@@ -45,23 +58,27 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: left;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-left: 24px;
   margin-right: 24px;
+  font-family: "Playfair Display", serif;
+  font-weight: 550;
+  font-size: 40px;
 }
 /*Link-Change color, remove underline */
 a {
-  color: #2c2c2c;
+  color: var(--dark-gray);
   text-decoration: none;
   font-size: 16px;
 }
-a:hover {
-  text-decoration: none;
-  color: #ff7485;
-}
+/* Remove underline and add color to text */
+a:hover,
 a:focus {
   text-decoration: none;
-  color: #ff7485;
+  color: var(--secondary-color);
 }
 .page_header {
   display: -webkit-box;
@@ -77,7 +94,7 @@ a:focus {
   letter-spacing: -0.5px;
 }
 .page_header.about_header {
-  border-bottom: 1px solid #b0afaf;
+  border-bottom: 1px solid var(--light-gray);
 }
 .page_header_item:last-child {
   -webkit-box-flex: 1;
@@ -94,12 +111,11 @@ a:focus {
   font-size: 15px;
   padding: 8px;
   -webkit-transition: 0.2s ease;
-  -o-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 .navigation_item--active {
   text-decoration: underline;
-  color: #3f0b52;
+  color: var(--primary-color);
 }
 .page_footer {
   clear: both;
@@ -135,54 +151,46 @@ a:focus {
   .grid {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 24px 1fr 24px 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: auto 24px auto;
+    grid-template-columns: auto auto;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     grid-gap: 24px;
-    margin: 16px 24px;
+    margin: 16px auto;
+    max-width: 900px;
   }
   .grid_item {
-    position: relative; /* Position relative for positioning the pseudo-element */
-    background-color: #2c2c2c;
-    color: #fff;
+    position: relative;
+    background-color: var(--bg-color-2);
+    /* color: var(--white); */
     width: auto;
     min-height: auto;
     padding: 24px;
     border-radius: 12px;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4),
-      0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
     -webkit-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
     transition: 0.3s ease;
   }
   .grid_item:hover {
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05); /* Scale the item on hover */
+    -webkit-transform: scale(var(--scale));
+    transform: scale(var(--scale)); /* Scale the item on hover */
     cursor: pointer;
   }
-  .grid_item:last-child {
-    -ms-grid-column: 3;
-    grid-column: 3;
-    grid-column-start: 3;
-    -ms-grid-column-span: 0;
-    grid-column-end: 3;
-    -ms-grid-row: 1;
-    grid-row: 1;
-    grid-row-start: 1;
-    -ms-grid-row-span: 2;
-    grid-row-end: 3;
-  }
-  /* class of <a href="#" class="link_mywork">See project</a> on my-work.html */
+
   .link_mywork {
-    color: #d3d0cb;
+    color: var(--dark-gray);
     padding: 0 0;
   }
-  .img_container {
-    display: flex;
-    gap: 8px;
-  }
 }
+.img_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
 /* setting media queries for mobile screens */
 @media all and (max-width: 500px) {
   .grid {
